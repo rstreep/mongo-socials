@@ -17,22 +17,22 @@ const userSchema = new Schema(
         validator: function(email) {
           const valEmail = /^([A-Za-z0-9_\.-]+)@([\dA-Za-z\.-]+)\.([A-Za-z\.]{2,6})$/
           return valEmail.test(email)
-        }
-      }
+        },
+      },
     },
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Thought'
-      }
+        ref: 'Thought',
+      },
     ],
 
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'User'
-      }
-    ]
+        ref: 'User',
+      },
+    ],
 
   },
 
